@@ -16,6 +16,8 @@
 		AFAFA5042AED3013009986E3 /* CICDOKRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA5032AED3013009986E3 /* CICDOKRTests.swift */; };
 		AFAFA50E2AED3013009986E3 /* CICDOKRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA50D2AED3013009986E3 /* CICDOKRUITests.swift */; };
 		AFAFA5102AED3013009986E3 /* CICDOKRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA50F2AED3013009986E3 /* CICDOKRUITestsLaunchTests.swift */; };
+		AFAFA51D2AED3350009986E3 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA51C2AED3350009986E3 /* Arithmetic.swift */; };
+		AFAFA51E2AED3350009986E3 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAFA51C2AED3350009986E3 /* Arithmetic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		AFAFA5092AED3013009986E3 /* CICDOKRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CICDOKRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAFA50D2AED3013009986E3 /* CICDOKRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDOKRUITests.swift; sourceTree = "<group>"; };
 		AFAFA50F2AED3013009986E3 /* CICDOKRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICDOKRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFAFA51C2AED3350009986E3 /* Arithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				AFAFA4F52AED3013009986E3 /* Assets.xcassets */,
 				AFAFA4F72AED3013009986E3 /* LaunchScreen.storyboard */,
 				AFAFA4FA2AED3013009986E3 /* Info.plist */,
+				AFAFA51C2AED3350009986E3 /* Arithmetic.swift */,
 			);
 			path = CICDOKR;
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAFA4F12AED3011009986E3 /* ViewController.swift in Sources */,
+				AFAFA51D2AED3350009986E3 /* Arithmetic.swift in Sources */,
 				AFAFA4ED2AED3011009986E3 /* AppDelegate.swift in Sources */,
 				AFAFA4EF2AED3011009986E3 /* SceneDelegate.swift in Sources */,
 			);
@@ -269,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFAFA5042AED3013009986E3 /* CICDOKRTests.swift in Sources */,
+				AFAFA51E2AED3350009986E3 /* Arithmetic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

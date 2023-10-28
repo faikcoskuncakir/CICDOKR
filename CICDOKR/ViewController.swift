@@ -8,12 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet private weak var resultLabel: UILabel!
+    
+    let math = Arithmetic()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        resultLabel.text = math.add(num1: 6, num2: 1).description
     }
-
-
+    
 }
 
