@@ -14,10 +14,42 @@
 # update_fastlane
 
 default_platform(:ios)
+skip_docs
+
+# iOS build configurations 
+appcenter_key = "ddda9b0d-762a-4b34-b03b-9778828b54c1"
+appcenter_owner = "fcoskuncakir-gmail.com"
+appcenter_appname = "CICDOKR"
+ipa_path = "./builds/CICDOKR"
+ios_app_scheme = "CICDOKR"
+ios_export_method = "ad-hoc"
+
+
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
-  end
+  desc “Build, and push a release to AppCenter”
+
+ lane :appcenter_release do
+  build
+  appcenter_upload(
+   api_token: appcenter_key,
+   owner_name: appcenter_owner,
+   app_name: appcenter_appname,
+   file: ipa_path,
+   notify_testers: true,
+   destinations: ios_export_method
+  )
+  clean_build_artifacts
+ end
+
+ lane :build do
+  gym(
+  scheme: ios_app_scheme, 
+  clean: true,
+  export_method: ios_export_method,
+  output_directory: './builds',
+  xcargs: "-allowProvisioningUpdates"
+  )
+ end
+
 end
