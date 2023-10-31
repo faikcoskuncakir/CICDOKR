@@ -12,8 +12,11 @@ pipeline {
         stage('Install Bundler') {
             steps {
                 script {
-                    sh 'gem install bundler --user-install'
-		    sh 'gem install fastlane --user-install'
+                    sh '''
+                        export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+                        gem install bundler --user-install
+                        gem install fastlane --user-install
+                    '''
                 }
             }
         }
