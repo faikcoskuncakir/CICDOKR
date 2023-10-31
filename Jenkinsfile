@@ -5,9 +5,13 @@ pipeline {
         LANG = 'en_US.UTF-8'
         LANGUAGE = 'en_US.UTF-8'
     }
-    stage('Build App') {
-        steps {
-            sh label: '', script: "bundle exec fastlane appcenter_release"
+    stages {
+        stage('Build App') {
+            steps {
+                script {
+                    sh "bundle exec fastlane appcenter_release"
+                }
+            }
         }
     }
 }
