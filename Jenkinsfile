@@ -11,7 +11,7 @@ pipeline {
         stage('Install Bundler') {
             steps {
                 script {
-                    sh 'sudo gem install bundler'
+                    sh 'gem install bundler'
                 }
             }
         }
@@ -25,4 +25,3 @@ pipeline {
         }
     }
 }
-
