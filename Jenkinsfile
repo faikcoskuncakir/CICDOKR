@@ -5,6 +5,7 @@ pipeline {
         LC_ALL = 'en_US.UTF-8'
         LANG = 'en_US.UTF-8'
         LANGUAGE = 'en_US.UTF-8'
+        PATH = "$PATH:/Users/faik.cakir/.gem/ruby/2.6.0/bin"
     }
     
     stages {
@@ -22,6 +23,7 @@ pipeline {
         stage('Build App') {
             steps {
                 script {
+		    sh 'bundle install' // or 'gem install bundler; bundle install'
                     sh 'bundle exec fastlane appcenter_release'
                 }
             }
