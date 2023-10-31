@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     sh 'gem install bundler --user-install'
-		    sh 'sudo gem install fastlane --user-install'
+		    sh 'gem install fastlane --user-install'
                 }
             }
         }
