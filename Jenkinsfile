@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     sh 'gem install bundler --user-install'
-		    sh 'gem install fastlane'
+		    sh 'gem install fastlane --user-install'
                 }
             }
         }
