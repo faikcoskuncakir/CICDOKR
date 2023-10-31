@@ -15,13 +15,21 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios custom_lane
+### ios appcenter_release
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios appcenter_release
 ```
 
-Description of what the lane does
+Build, and push a release to AppCenter
+
+### ios build
+
+```sh
+[bundle exec] fastlane ios build
+```
+
+
 
 ----
 

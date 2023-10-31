@@ -14,20 +14,17 @@
 # update_fastlane
 
 default_platform(:ios)
-skip_docs
 
 # iOS build configurations 
-appcenter_key = "ddda9b0d-762a-4b34-b03b-9778828b54c1"
+appcenter_key = "8d50119554913b91a001fb00f4706e311ededc79"
 appcenter_owner = "fcoskuncakir-gmail.com"
 appcenter_appname = "CICDOKR"
-ipa_path = "./builds/CICDOKR"
+ipa_path = "/Users/faik.cakir/Desktop/CICDOKR/builds/CICDOKR.ipa"
 ios_app_scheme = "CICDOKR"
 ios_export_method = "ad-hoc"
 
-
-
 platform :ios do
-  desc “Build, and push a release to AppCenter”
+  desc "Build, and push a release to AppCenter"
 
  lane :appcenter_release do
   build
@@ -37,7 +34,7 @@ platform :ios do
    app_name: appcenter_appname,
    file: ipa_path,
    notify_testers: true,
-   destinations: ios_export_method
+   destinations: '*'
   )
   clean_build_artifacts
  end
@@ -47,7 +44,7 @@ platform :ios do
   scheme: ios_app_scheme, 
   clean: true,
   export_method: ios_export_method,
-  output_directory: './builds',
+  output_directory: '/Users/faik.cakir/Desktop/CICDOKR/builds',
   xcargs: "-allowProvisioningUpdates"
   )
  end
