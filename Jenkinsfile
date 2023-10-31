@@ -8,10 +8,10 @@ pipeline {
     }
     
     stages {
-        stage('Build Dependencies') {
+        stage('Install Bundler') {
             steps {
                 script {
-                    sh 'bundle install'
+                    sh 'sudo gem install bundler'
                 }
             }
         }
