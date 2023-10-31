@@ -8,11 +8,11 @@ pipeline {
     }
     
     stages {
-        stage('Install Bundler') {
+
+        stage('Install Brew and Packages') {
             steps {
                 script {
-                    sh 'gem install bundler --user-install'
-		    sh 'gem install fastlane --user-install'
+                    sh 'brew install your-package-name'
                 }
             }
         }
