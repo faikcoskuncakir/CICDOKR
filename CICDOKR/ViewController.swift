@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = math.add(num1: 6, num2: 7).description
+        resultLabel.text = math.add(num1: 6, num2: 8).description
     }
     
 }
