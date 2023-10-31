@@ -31,6 +31,14 @@ Build, and push a release to AppCenter
 
 
 
+### ios run_app_tests
+
+```sh
+[bundle exec] fastlane ios run_app_tests
+```
+
+
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

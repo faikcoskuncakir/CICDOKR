@@ -28,6 +28,7 @@ platform :ios do
 
  lane :appcenter_release do
   build
+  run_app_tests
   appcenter_upload(
    api_token: appcenter_key,
    owner_name: appcenter_owner,
@@ -47,6 +48,16 @@ platform :ios do
   output_directory: '/Users/faik.cakir/Desktop/CICDOKR/builds',
   xcargs: "-allowProvisioningUpdates"
   )
+ end
+
+ lane :run_app_tests do
+   scan(
+     scheme: ios_app_scheme,
+     clean: true,
+     output_directory: "test_results",
+     devices: ["iPhone 14"],
+     code_coverage: true
+   )
  end
 
 end
