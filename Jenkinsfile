@@ -14,8 +14,23 @@ pipeline {
         stage('Install Bundler') {
             steps {
                 script {
-                    sh 'gem install bundler'
-		    sh 'gem install fastlane'
+                    sh 'gem install bundler --user-install'
+                }
+            }
+        }
+
+        stage('Install Homebrew') {
+            steps {
+                script {
+                    sh '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+                }
+            }
+        }
+
+        stage('Install Fastlane') {
+            steps {
+                script {
+                    sh 'brew install fastlane'
                 }
             }
         }
