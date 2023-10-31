@@ -11,9 +11,7 @@ pipeline {
         stage('Install Bundler') {
             steps {
                 script {
-                    sh 'gem install bundler:2.6.0'
-		    sh 'gem install fastlane --user-install'
-		    sh 'bundle install'
+                    sh 'gem install bundler --user-install'
                 }
             }
         }
