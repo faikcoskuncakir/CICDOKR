@@ -23,7 +23,7 @@ pipeline {
         stage('Build App') {
             steps {
                 script {
-		    sh 'bundle install --user-install' // or 'gem install bundler; bundle install'
+		    sh 'gem install bundler; bundle install --user-install'
                     sh 'bundle exec fastlane appcenter_release'
                 }
             }
